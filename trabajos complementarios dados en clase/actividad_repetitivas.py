@@ -17,7 +17,6 @@ for numero_mensaje in range(1,6):
     print(f"el mensaje encriptado es: {mensaje_encript}")
 
 #actividad 2
-
 import random
 opcion = input("jugamos a piedra papel o tijeras? ").lower()
 victorias = 0
