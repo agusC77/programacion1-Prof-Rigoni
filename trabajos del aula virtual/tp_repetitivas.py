@@ -66,5 +66,66 @@ while opcion == "s":
         elif intento_usuario == numero:
             completado = False
     print(f"FELICIDADES!!, completaste el juego en {intentos} intentos")
-    opcion = input("deseas volver a jugar? (s/n: )")
+    opcion = input("deseas volver a jugar? (s/n): ")
 
+#actividad 6
+
+for i in range(100,-1,-2):
+    print(i)
+
+#actividad 7
+
+num = int(input("ingrese un numero entero:"))
+suma = 0
+for i in range(1,num + 1):
+    suma += i
+
+print(f"la suma de los numeros es: {suma}")
+
+#actividad 8
+contador_pares = 0
+contador_impares = 0
+contador_positivos = 0
+contador_negativos = 0
+contador_ceros = 0
+for i in range(100):
+    numeros = int(input("ingrese numeros enteros: "))
+    if numeros == 0:
+        contador_ceros += 1
+    else:
+        if numeros < 0:
+            contador_negativos += 1 
+        elif numeros > 0:
+            contador_positivos += 1
+        
+        if numeros % 2 == 0:
+            contador_pares += 1
+        elif numeros % 2 != 0:
+            contador_impares+= 1
+
+print(f"en total hay: {contador_negativos} numeros negativos y {contador_positivos} numeros positivos, entre esos numeros hay {contador_pares} numeros pares y {contador_impares} numeros impares")
+print(f"ademas de esos numeros, hay {contador_ceros} ceros dados por el usuario")
+
+#actividad 9
+suma = 0
+cantidad = int(input("ingrese cuantos numeros desea ingresar"))
+
+for i in range(cantidad):
+    numeros = int(input("ingrese numeros enteros: "))
+    suma += numeros
+
+media = suma / cantidad
+print(f"la media de los numeros es: {media}")
+
+#actividad 10
+
+numero = int(input("Ingrese un número: "))
+numero_invertido = 0
+aux = numero
+
+while aux > 0:
+    digito = aux % 10          
+    numero_invertido = numero_invertido * 10 + digito 
+    aux = aux // 10               
+
+print(f"el numero invertido es: {numero_invertido}")
