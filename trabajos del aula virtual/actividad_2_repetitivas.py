@@ -54,19 +54,39 @@ for i in range(3, -1, -1):
             print(i,j,k)
 
 #actividad 8: reloj digital
-
+import time
+for horas in range(24):
+    for minutos in range(60):
+        for segundos in range(60):
+            print(f"{horas:02}:{minutos:02}:{segundos:02}")
+            time.sleep(1)
         
 #actividad 9:lanzamiento de dado:
-
 import random
 
-jugar = input("quieres jugar a lanzar un dado y ver en cuanto sacas 6? (s/n) ").lower
-while jugar == "s":
-    contador_intentos = 0
-    tirar_dado = random.randint(1,6)
-    if tirar_dado != 6:
-        contador_intentos += 1
-        print( "No salio 6 :(")
-    else:
-        print(f"Ha salido 6!, has tardado {contador_intentos}")
-jugar = input("deseas volver a jugar? (s/n)").lower
+continuar = input("¿Querés jugar a sacar un 6? (s/n): ").lower()
+while continuar == "s":
+    print("Lanzando hasta obtener un 6…")
+    lanzamiento = 0
+    intentos = 0
+    while lanzamiento != 6:
+        lanzamiento = random.randint(1, 6)
+        intentos += 1
+        print(lanzamiento, end=" ")
+    print(f"\n¡Salió 6 tras {intentos} lanzamientos!\n")
+    continuar = input("¿Querés volver a jugar? (s/n): ").lower()
+print("¡Gracias por jugar!")
+
+#actividad 10: coordenadas,usuario:
+coordenadas = False
+while coordenadas == False:
+    fila = int(input("ingrese la fila del 1 al 3"))
+    while fila < 1 or fila > 3:
+        fila = int(input("la fila ingresada esta fuera de rango, por favor ingresela nuevamente"))
+    
+    columna = int(input(" ingrese la columna del 1 al 4"))
+    while columna < 1 or columna > 4:
+            columna = int(input("ingrese una columna del 1 al 4 por favor"))
+            
+    coordenadas = True
+print(f"las coordenadas correctas son {fila} {columna}") 
