@@ -27,7 +27,7 @@ print(f"la lista de animales cambiada es: {lista}")
 #actividad 5
 #EXPLICACION CON MIS PALABRAS: 
 numeros = [9,15,3,22,7] # el programa crea una lista de 5 numeros desordenados
-numeros.remove(numeros[3]) # le aplica el comando remove y el comando max a esa lista, lo que remueve el numero mas grande
+numeros.remove(max(numeros)) # le aplica el comando remove y el comando max a esa lista, lo que remueve el numero mas grande
 print(numeros) # imprime la lista modificada, se imprimira [9,15,3,7]
 
 #actividad 6
@@ -58,7 +58,7 @@ print(f"la fila con el doble de 5, de 10 y de 15 es: {dobles}")
 compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
 compras[2].append("jugo")
 compras[1][1] = "tallarines"
-compras[0].remove("pan")
+compras.remove(compras[0][0])
 
 print(f"la lista de compras modificada es: {compras}")
 
